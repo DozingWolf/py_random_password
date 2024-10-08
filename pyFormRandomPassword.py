@@ -99,7 +99,9 @@ class PasswdWinForm(QWidget,Ui_Form):
         self.__fileData.close()
 
 if __name__ == '__main__':
+    from qt_material import apply_stylesheet
     app = QApplication([])
     win = PasswdWinForm()
+    apply_stylesheet(app=app, theme='dark_teal.xml')
     win.show()
     app.exec()
